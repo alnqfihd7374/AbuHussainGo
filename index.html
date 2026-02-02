@@ -4,27 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أبوحسين للمشاوير والإنجازات | AbuHussein Rides</title>
-    <meta name="description" content="خدمات نقل وإنجاز معاملات باحترافية وأمان داخل اليمن وخارجه. مشوارك علينا وراحتك تهمنا.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
-    
     <link rel="icon" type="image/png" href="favicon.png"> 
 </head>
 <body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fas fa-route fa-3x"></i>
+            <h2>أبوحسين <span>للمشاوير</span></h2>
+            <div class="loading-bar"></div>
+        </div>
+    </div>
 
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
                 <h1>أبوحسين <span>للمشاوير</span></h1>
             </div>
+            
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#about">من نحن</a></li>
@@ -32,24 +50,23 @@
                 <li><a href="#coverage">المناطق</a></li>
                 <li><a href="#gallery">المعرض</a></li>
                 <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="#booking" class="mobile-booking-btn">احجز الآن</a></li>
             </ul>
-            <div class="nav-btn">
+
+            <div class="desktop-btn">
                 <a href="#booking" class="btn btn-primary">احجز مشوارك</a>
-            </div>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
 
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
-        <div class="container hero-content" data-aos="fade-up">
+        <div class="container hero-content" data-aos="zoom-in" data-aos-duration="1200">
             <h1>مشوارك علينا... <span class="highlight">وراحتك تهمنا</span></h1>
-            <p>خدمات نقل وإنجاز معاملات باحترافية وأمان داخل اليمن وخارجه.</p>
+            <p>خدمات نقل VIP وإنجاز معاملات باحترافية وأمان داخل اليمن وخارجه.</p>
             <div class="hero-buttons">
-                <a href="#booking" class="btn btn-accent">اطلب خدمة الآن <i class="fas fa-arrow-left"></i></a>
-                <a href="https://wa.me/967775196324" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> احجز عبر الواتساب</a>
+                <a href="#booking" class="btn btn-accent pulse-anim">اطلب خدمة الآن <i class="fas fa-arrow-left"></i></a>
+                <a href="https://wa.me/967775196324" class="btn btn-secondary glass-effect"><i class="fab fa-whatsapp"></i> واتساب مباشر</a>
             </div>
         </div>
     </section>
@@ -58,54 +75,68 @@
         <div class="container about-container">
             <div class="about-text" data-aos="fade-left">
                 <h2 class="section-title">من نحن</h2>
-                <p><strong>أبوحسين للمشاوير والإنجازات</strong> يقدم خدمات نقل موثوقة وإنجاز معاملات باهتمام كبير براحة العميل، مع خبرة في الطرق وسفر آمن بين المدن والدول المجاورة.</p>
-                <p>نؤمن أن الرحلة ليست مجرد انتقال من مكان إلى آخر، بل تجربة يجب أن تكون هادئة وخالية من القلق.</p>
+                <p><strong>أبوحسين للمشاوير والإنجازات</strong> ليست مجرد وسيلة نقل، بل شريكك الموثوق في كل رحلة. نقدم تجربة سفر تجمع بين الفخامة والأمان.</p>
                 <ul class="features-list">
-                    <li><i class="fas fa-check-circle"></i> التزام دقيق بالمواعيد</li>
-                    <li><i class="fas fa-shield-alt"></i> أمان وموثوقية عالية</li>
-                    <li><i class="fas fa-users"></i> خدمة خاصة للعائلات وكبار السن</li>
+                    <li>
+                        <span class="icon-box"><i class="fas fa-clock"></i></span>
+                        <div>
+                            <h4>دقة في المواعيد</h4>
+                            <p>نقدر وقتك ونلتزم بكل دقيقة.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon-box"><i class="fas fa-shield-alt"></i></span>
+                        <div>
+                            <h4>أمان مطلق</h4>
+                            <p>سائقون محترفون ومركبات مفحوصة.</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="about-image" data-aos="fade-right">
-                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1000&auto=format&fit=crop" alt="رحلة آمنة">
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1000" alt="طريق سفر">
+                <div class="experience-badge">
+                    <span>خدمة</span>
+                    <strong>VIP</strong>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="section services bg-light">
+    <section id="services" class="section services bg-alt">
         <div class="container">
-            <h2 class="section-title center">خدماتنا</h2>
-            <p class="section-subtitle center">نقدم مجموعة متكاملة من الخدمات لتلبية كافة احتياجاتك</p>
+            <div class="section-header center" data-aos="fade-up">
+                <h2 class="section-title">خدماتنا المتميزة</h2>
+                <p class="section-subtitle">نغطي كافة احتياجاتك في النقل والإنجاز</p>
+            </div>
             
             <div class="services-grid">
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon"><i class="fas fa-car-side"></i></div>
-                    <h3>مشاوير داخل المدن</h3>
-                    <p>تنقل مريح وآمن داخل المدن مع التزام كامل بالمواعيد.</p>
+                    <div class="card-icon"><i class="fas fa-city"></i></div>
+                    <h3>مشاوير خاصة</h3>
+                    <p>تنقل داخل المدينة برفاهية وخصوصية تامة.</p>
+                    <a href="#booking" class="card-link">احجز الآن &larr;</a>
                 </div>
-
+                
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon"><i class="fas fa-bus"></i></div>
-                    <h3>سفر بين المحافظات</h3>
-                    <p>رحلات منظمة ومريحة بين المحافظات بخبرة في الطرق الطويلة.</p>
+                    <div class="card-icon"><i class="fas fa-road"></i></div>
+                    <h3>سفر محافظات</h3>
+                    <p>رحلات طويلة مريحة بين المدن اليمنية.</p>
+                    <a href="#booking" class="card-link">احجز الآن &larr;</a>
                 </div>
 
                 <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon"><i class="fas fa-globe-asia"></i></div>
-                    <h3>رحلات خارجية</h3>
-                    <p>خدمة نقل إلى الدول المجاورة (السعودية - عمان) بكل أمان وسلاسة.</p>
+                    <div class="card-icon"><i class="fas fa-passport"></i></div>
+                    <h3>رحلات دولية</h3>
+                    <p>نقل مباشر للسعودية وسلطنة عمان.</p>
+                    <a href="#booking" class="card-link">احجز الآن &larr;</a>
                 </div>
 
                 <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="icon"><i class="fas fa-file-signature"></i></div>
-                    <h3>إنجاز المعاملات</h3>
-                    <p>تنفيذ المهام والمعاملات نيابةً عنك بسرعة ودقة.</p>
-                </div>
-
-                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="icon"><i class="fas fa-users"></i></div>
-                    <h3>خدمة العائلات</h3>
-                    <p>رحلات مريحة وهادئة تناسب العائلات وكبار السن بخصوصية تامة.</p>
+                    <div class="card-icon"><i class="fas fa-file-contract"></i></div>
+                    <h3>تخليص معاملات</h3>
+                    <p>ننجز عنك المهام الحكومية والخاصة.</p>
+                    <a href="#booking" class="card-link">اطلب الخدمة &larr;</a>
                 </div>
             </div>
         </div>
@@ -113,102 +144,77 @@
 
     <section id="coverage" class="section coverage">
         <div class="container">
-            <h2 class="section-title center">المناطق التي نخدمها</h2>
-            <div class="coverage-grid">
-                <div class="coverage-item" data-aos="zoom-in">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>حضرموت</span>
-                </div>
-                <div class="coverage-item" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>عدن</span>
-                </div>
-                <div class="coverage-item" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>المهرة</span>
-                </div>
-                <div class="coverage-item highlight-coverage" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-flag"></i>
-                    <span>المملكة العربية السعودية</span>
-                </div>
-                <div class="coverage-item highlight-coverage" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fas fa-flag"></i>
-                    <span>سلطنة عمان</span>
-                </div>
+            <h2 class="section-title center" style="color:white">نصل بك إلى أي مكان</h2>
+            <div class="map-visual">
+                <div class="location-point" style="top:40%; left:30%" data-tooltip="صنعاء"></div>
+                <div class="location-point" style="top:60%; left:40%" data-tooltip="عدن"></div>
+                <div class="location-point" style="top:50%; left:70%" data-tooltip="حضرموت"></div>
+                <div class="location-point saudi" style="top:20%; left:20%" data-tooltip="السعودية"></div>
             </div>
-            <p class="coverage-text">وجهتك علينا... نوصلّك بأمان وثقة</p>
-        </div>
-    </section>
-
-    <section id="gallery" class="section gallery bg-light">
-        <div class="container">
-            <h2 class="section-title center">معرض الصور</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item" data-aos="fade-up"><img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=800" alt="باص من الخارج"></div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="https://images.unsplash.com/photo-1542259682-1c251d529235?q=80&w=800" alt="مقاعد مريحة"></div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="https://images.unsplash.com/photo-1549557088-33346d0426b6?q=80&w=800" alt="طريق سفر"></div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300"><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800" alt="رحلة آمنة"></div>
+            <div class="coverage-tags center">
+                <span>حضرموت</span>
+                <span>عدن</span>
+                <span>صنعاء</span>
+                <span>المهرة</span>
+                <span class="highlight-tag">السعودية</span>
+                <span class="highlight-tag">عمان</span>
             </div>
         </div>
     </section>
 
-    <section id="booking" class="section booking">
+    <section id="booking" class="section booking bg-alt">
         <div class="container">
-            <div class="booking-wrapper" data-aos="zoom-in-up">
-                <h2 class="section-title center">احجز مشوارك الآن</h2>
-                <p class="center" style="margin-bottom: 30px;">املأ النموذج التالي وسيتم تحويلك للواتساب لإتمام الحجز فوراً</p>
+            <div class="booking-wrapper" data-aos="flip-up">
+                <div class="booking-header">
+                    <h2>حجز فوري</h2>
+                    <p>بياناتك تصلنا مباشرة عبر الواتساب</p>
+                </div>
                 
                 <form id="bookingForm">
-                    <div class="form-group">
+                    <div class="form-group full-width">
                         <label>نوع الخدمة</label>
                         <select id="serviceType" required>
                             <option value="ride">مشوار خاص</option>
                             <option value="travel">سفر بين المحافظات</option>
                             <option value="international">رحلة خارجية</option>
                             <option value="errand">إنجاز معاملة</option>
-                            <option value="family">مشوار عائلي</option>
                         </select>
                     </div>
 
-                    <div class="form-row">
+                    <div class="form-grid">
                         <div class="form-group">
-                            <label>الاسم الكامل</label>
-                            <input type="text" id="fullName" placeholder="الاسم الكريم" required>
+                            <input type="text" id="fullName" placeholder=" " required>
+                            <label class="floating-label">الاسم الكامل</label>
                         </div>
                         <div class="form-group">
-                            <label>رقم الجوال</label>
-                            <input type="tel" id="phoneNumber" placeholder="77xxxxxxx" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>من</label>
-                            <input type="text" id="fromLocation" placeholder="مكان الانطلاق" required>
+                            <input type="tel" id="phoneNumber" placeholder=" " required>
+                            <label class="floating-label">رقم الجوال</label>
                         </div>
                         <div class="form-group">
-                            <label>إلى</label>
-                            <input type="text" id="toLocation" placeholder="الوجهة" required>
+                            <input type="text" id="fromLocation" placeholder=" " required>
+                            <label class="floating-label">من</label>
                         </div>
-                    </div>
-
-                    <div class="form-row">
                         <div class="form-group">
-                            <label>التاريخ</label>
+                            <input type="text" id="toLocation" placeholder=" " required>
+                            <label class="floating-label">إلى</label>
+                        </div>
+                        <div class="form-group">
                             <input type="date" id="date" required>
+                            <label class="floating-label" style="top: -10px; font-size: 12px;">التاريخ</label>
                         </div>
                         <div class="form-group">
-                            <label>عدد الركاب</label>
-                            <input type="number" id="passengers" min="1" value="1">
+                            <input type="number" id="passengers" min="1" value="1" placeholder=" ">
+                            <label class="floating-label">عدد الركاب</label>
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label>ملاحظات إضافية</label>
-                        <textarea id="notes" rows="3" placeholder="هل يوجد أمتعة كثيرة؟ احتياجات خاصة؟"></textarea>
+                    <div class="form-group full-width">
+                        <textarea id="notes" rows="3" placeholder="ملاحظات إضافية..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-accent btn-block">إرسال الحجز <i class="fab fa-whatsapp"></i></button>
+                    <button type="submit" class="btn btn-accent btn-block hover-lift">
+                        تأكيد الحجز <i class="fab fa-whatsapp"></i>
+                    </button>
                 </form>
             </div>
         </div>
@@ -216,36 +222,33 @@
 
     <footer id="contact" class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>أبوحسين للمشاوير</h3>
-                    <p>خدمة نقل موثوقة داخل اليمن وخارجه. راحتك وأمانك هي أولويتنا القصوى.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>روابط سريعة</h3>
-                    <ul>
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#services">الخدمات</a></li>
-                        <li><a href="#booking">حجز موعد</a></li>
-                        <li><a href="#coverage">مناطق الخدمة</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>تواصل معنا</h3>
-                    <div class="contact-info">
-                        <p><i class="fas fa-phone-alt"></i> <a href="tel:775196324">775196324</a></p>
-                        <p><i class="fas fa-phone-alt"></i> <a href="tel:738258680">738258680</a></p>
-                        <p><i class="fab fa-whatsapp"></i> خدمة العملاء متاحة 24/7</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>أبوحسين</h2>
+                    <p>رفيق دربك الأمين في اليمن وخارجه.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
+                </div>
+                <div class="footer-contact">
+                    <h3>اتصل بنا</h3>
+                    <a href="tel:775196324" class="contact-item">
+                        <i class="fas fa-phone"></i> 775196324
+                    </a>
+                    <a href="tel:738258680" class="contact-item">
+                        <i class="fas fa-phone"></i> 738258680
+                    </a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>جميع الحقوق محفوظة &copy; 2024 أبوحسين للمشاوير والإنجازات</p>
+                <p>&copy; 2024 أبوحسين للمشاوير. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/967775196324" class="float-whatsapp" target="_blank">
+    <a href="https://wa.me/967775196324" class="float-whatsapp pulse-anim" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
