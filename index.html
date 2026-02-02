@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أبوحسين للمشاوير والإنجازات | AbuHussein Rides</title>
-    
+    <title>أبوحسين للمشاوير والإنجازات | VIP Transport</title>
+    <meta name="description" content="خدمات نقل VIP وإنجاز معاملات باحترافية وأمان.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
@@ -13,26 +14,27 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
+    
     <link rel="icon" type="image/png" href="favicon.png"> 
 </head>
 <body>
 
     <div id="preloader">
         <div class="loader-content">
-            <i class="fas fa-route fa-3x"></i>
+            <i class="fas fa-steering-wheel fa-spin-pulse"></i>
             <h2>أبوحسين <span>للمشاوير</span></h2>
-            <div class="loading-bar"></div>
+            <div class="loading-line"></div>
         </div>
     </div>
 
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <h1>أبوحسين <span>للمشاوير</span></h1>
+                <a href="#home"><h1>أبوحسين <span>للمشاوير</span></h1></a>
             </div>
             
             <div class="nav-controls">
-                <button id="theme-toggle" class="theme-btn">
+                <button id="theme-toggle" class="theme-btn" aria-label="تبديل الوضع الليلي">
                     <i class="fas fa-moon"></i>
                 </button>
                 
@@ -50,7 +52,7 @@
                 <li><a href="#coverage">المناطق</a></li>
                 <li><a href="#gallery">المعرض</a></li>
                 <li><a href="#contact">تواصل معنا</a></li>
-                <li><a href="#booking" class="mobile-booking-btn">احجز الآن</a></li>
+                <li><a href="#booking" class="mobile-only-link">احجز الآن</a></li>
             </ul>
 
             <div class="desktop-btn">
@@ -61,12 +63,12 @@
 
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
-        <div class="container hero-content" data-aos="zoom-in" data-aos-duration="1200">
+        <div class="container hero-content" data-aos="zoom-in" data-aos-duration="1000">
             <h1>مشوارك علينا... <span class="highlight">وراحتك تهمنا</span></h1>
             <p>خدمات نقل VIP وإنجاز معاملات باحترافية وأمان داخل اليمن وخارجه.</p>
             <div class="hero-buttons">
-                <a href="#booking" class="btn btn-accent pulse-anim">اطلب خدمة الآن <i class="fas fa-arrow-left"></i></a>
-                <a href="https://wa.me/967775196324" class="btn btn-secondary glass-effect"><i class="fab fa-whatsapp"></i> واتساب مباشر</a>
+                <a href="#booking" class="btn btn-accent pulse-effect">اطلب خدمة الآن <i class="fas fa-arrow-left"></i></a>
+                <a href="https://wa.me/967775196324" class="btn btn-glass"><i class="fab fa-whatsapp"></i> واتساب مباشر</a>
             </div>
         </div>
     </section>
@@ -76,29 +78,23 @@
             <div class="about-text" data-aos="fade-left">
                 <h2 class="section-title">من نحن</h2>
                 <p><strong>أبوحسين للمشاوير والإنجازات</strong> ليست مجرد وسيلة نقل، بل شريكك الموثوق في كل رحلة. نقدم تجربة سفر تجمع بين الفخامة والأمان.</p>
-                <ul class="features-list">
-                    <li>
-                        <span class="icon-box"><i class="fas fa-clock"></i></span>
-                        <div>
-                            <h4>دقة في المواعيد</h4>
-                            <p>نقدر وقتك ونلتزم بكل دقيقة.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon-box"><i class="fas fa-shield-alt"></i></span>
-                        <div>
-                            <h4>أمان مطلق</h4>
-                            <p>سائقون محترفون ومركبات مفحوصة.</p>
-                        </div>
-                    </li>
-                </ul>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <i class="fas fa-clock"></i>
+                        <h4>دقة المواعيد</h4>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>أمان عالي</h4>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fas fa-star"></i>
+                        <h4>خدمة VIP</h4>
+                    </div>
+                </div>
             </div>
             <div class="about-image" data-aos="fade-right">
-                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1000" alt="طريق سفر">
-                <div class="experience-badge">
-                    <span>خدمة</span>
-                    <strong>VIP</strong>
-                </div>
+                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1000" alt="طريق سفر">
             </div>
         </div>
     </section>
@@ -107,36 +103,32 @@
         <div class="container">
             <div class="section-header center" data-aos="fade-up">
                 <h2 class="section-title">خدماتنا المتميزة</h2>
-                <p class="section-subtitle">نغطي كافة احتياجاتك في النقل والإنجاز</p>
+                <p>نغطي كافة احتياجاتك في النقل والإنجاز</p>
             </div>
             
             <div class="services-grid">
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card-icon"><i class="fas fa-city"></i></div>
+                    <div class="card-icon"><i class="fas fa-car"></i></div>
                     <h3>مشاوير خاصة</h3>
                     <p>تنقل داخل المدينة برفاهية وخصوصية تامة.</p>
-                    <a href="#booking" class="card-link">احجز الآن &larr;</a>
                 </div>
                 
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-icon"><i class="fas fa-road"></i></div>
                     <h3>سفر محافظات</h3>
                     <p>رحلات طويلة مريحة بين المدن اليمنية.</p>
-                    <a href="#booking" class="card-link">احجز الآن &larr;</a>
                 </div>
 
                 <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="card-icon"><i class="fas fa-passport"></i></div>
                     <h3>رحلات دولية</h3>
                     <p>نقل مباشر للسعودية وسلطنة عمان.</p>
-                    <a href="#booking" class="card-link">احجز الآن &larr;</a>
                 </div>
 
                 <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="card-icon"><i class="fas fa-file-contract"></i></div>
+                    <div class="card-icon"><i class="fas fa-file-signature"></i></div>
                     <h3>تخليص معاملات</h3>
                     <p>ننجز عنك المهام الحكومية والخاصة.</p>
-                    <a href="#booking" class="card-link">اطلب الخدمة &larr;</a>
                 </div>
             </div>
         </div>
@@ -144,34 +136,45 @@
 
     <section id="coverage" class="section coverage">
         <div class="container">
-            <h2 class="section-title center" style="color:white">نصل بك إلى أي مكان</h2>
-            <div class="map-visual">
-                <div class="location-point" style="top:40%; left:30%" data-tooltip="صنعاء"></div>
-                <div class="location-point" style="top:60%; left:40%" data-tooltip="عدن"></div>
-                <div class="location-point" style="top:50%; left:70%" data-tooltip="حضرموت"></div>
-                <div class="location-point saudi" style="top:20%; left:20%" data-tooltip="السعودية"></div>
+            <h2 class="section-title center text-white">نصل بك إلى أي مكان</h2>
+            <div class="map-visual" data-aos="zoom-in">
+                <div class="point point-1" data-name="صنعاء"></div>
+                <div class="point point-2" data-name="عدن"></div>
+                <div class="point point-3" data-name="حضرموت"></div>
+                <div class="point point-4" data-name="المهرة"></div>
+                <div class="point point-saudi" data-name="السعودية"></div>
             </div>
-            <div class="coverage-tags center">
-                <span>حضرموت</span>
-                <span>عدن</span>
-                <span>صنعاء</span>
-                <span>المهرة</span>
-                <span class="highlight-tag">السعودية</span>
-                <span class="highlight-tag">عمان</span>
+            <div class="coverage-list center">
+                <span class="tag">حضرموت</span>
+                <span class="tag">عدن</span>
+                <span class="tag">صنعاء</span>
+                <span class="tag highlight-tag">السعودية</span>
+                <span class="tag highlight-tag">عمان</span>
             </div>
         </div>
     </section>
 
-    <section id="booking" class="section booking bg-alt">
+    <section id="gallery" class="section gallery bg-alt">
         <div class="container">
-            <div class="booking-wrapper" data-aos="flip-up">
+            <h2 class="section-title center">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up"><img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=600" alt="صورة 1"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="https://images.unsplash.com/photo-1542259682-1c251d529235?q=80&w=600" alt="صورة 2"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=600" alt="صورة 3"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="section booking">
+        <div class="container">
+            <div class="booking-card" data-aos="flip-up">
                 <div class="booking-header">
                     <h2>حجز فوري</h2>
-                    <p>بياناتك تصلنا مباشرة عبر الواتساب</p>
+                    <p>بياناتك تصلنا واتساب مباشرة</p>
                 </div>
                 
                 <form id="bookingForm">
-                    <div class="form-group full-width">
+                    <div class="form-group full">
                         <label>نوع الخدمة</label>
                         <select id="serviceType" required>
                             <option value="ride">مشوار خاص</option>
@@ -181,74 +184,67 @@
                         </select>
                     </div>
 
-                    <div class="form-grid">
+                    <div class="form-row">
                         <div class="form-group">
-                            <input type="text" id="fullName" placeholder=" " required>
-                            <label class="floating-label">الاسم الكامل</label>
+                            <label>الاسم</label>
+                            <input type="text" id="fullName" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" id="phoneNumber" placeholder=" " required>
-                            <label class="floating-label">رقم الجوال</label>
+                            <label>الجوال</label>
+                            <input type="tel" id="phoneNumber" placeholder="77xxxxxxx" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>من</label>
+                            <input type="text" id="fromLocation" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="fromLocation" placeholder=" " required>
-                            <label class="floating-label">من</label>
+                            <label>إلى</label>
+                            <input type="text" id="toLocation" required>
                         </div>
+                    </div>
+
+                    <div class="form-row">
                         <div class="form-group">
-                            <input type="text" id="toLocation" placeholder=" " required>
-                            <label class="floating-label">إلى</label>
-                        </div>
-                        <div class="form-group">
+                            <label>التاريخ</label>
                             <input type="date" id="date" required>
-                            <label class="floating-label" style="top: -10px; font-size: 12px;">التاريخ</label>
                         </div>
                         <div class="form-group">
-                            <input type="number" id="passengers" min="1" value="1" placeholder=" ">
-                            <label class="floating-label">عدد الركاب</label>
+                            <label>الركاب</label>
+                            <input type="number" id="passengers" min="1" value="1">
                         </div>
                     </div>
 
-                    <div class="form-group full-width">
-                        <textarea id="notes" rows="3" placeholder="ملاحظات إضافية..."></textarea>
+                    <div class="form-group full">
+                        <label>ملاحظات</label>
+                        <textarea id="notes" rows="2"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-accent btn-block hover-lift">
-                        تأكيد الحجز <i class="fab fa-whatsapp"></i>
-                    </button>
+                    <button type="submit" class="btn btn-accent full-btn">تأكيد الحجز <i class="fab fa-whatsapp"></i></button>
                 </form>
             </div>
         </div>
     </section>
 
     <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h2>أبوحسين</h2>
-                    <p>رفيق دربك الأمين في اليمن وخارجه.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-contact">
-                    <h3>اتصل بنا</h3>
-                    <a href="tel:775196324" class="contact-item">
-                        <i class="fas fa-phone"></i> 775196324
-                    </a>
-                    <a href="tel:738258680" class="contact-item">
-                        <i class="fas fa-phone"></i> 738258680
-                    </a>
-                </div>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>أبوحسين</h3>
+                <p>رفيق دربك الأمين.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 أبوحسين للمشاوير. جميع الحقوق محفوظة.</p>
+            <div class="footer-col contact-details">
+                <a href="tel:775196324"><i class="fas fa-phone"></i> 775196324</a>
+                <a href="tel:738258680"><i class="fas fa-phone"></i> 738258680</a>
             </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 جميع الحقوق محفوظة</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/967775196324" class="float-whatsapp pulse-anim" target="_blank">
+    <a href="https://wa.me/967775196324" class="float-wa pulse-effect" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
