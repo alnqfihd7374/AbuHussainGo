@@ -1,467 +1,113 @@
-/* --- المتغيرات (الوضع الفاتح الافتراضي) --- */
-:root {
-    --primary: #0B3C5D;
-    --secondary: #1ABC9C;
-    --accent: #F39C12;
-    --bg-body: #ffffff;
-    --bg-alt: #F5F7FA;
-    --text-main: #2C3E50;
-    --text-light: #7f8c8d;
-    --card-bg: #ffffff;
-    --shadow: 0 10px 30px rgba(0,0,0,0.08);
-    --nav-bg: rgba(11, 60, 93, 0.95);
-    --input-bg: #fff;
-    --border: #e1e1e1;
-}
-
-/* --- متغيرات الوضع الليلي --- */
-body.dark-mode {
-    --primary: #3498db;
-    --secondary: #16a085;
-    --accent: #e67e22;
-    --bg-body: #121212;
-    --bg-alt: #1a1a1a;
-    --text-main: #ecf0f1;
-    --text-light: #bdc3c7;
-    --card-bg: #252525;
-    --shadow: 0 10px 30px rgba(0,0,0,0.4);
-    --nav-bg: rgba(0, 0, 0, 0.95);
-    --input-bg: #333;
-    --border: #444;
-}
-
-/* --- إصلاح القلتش --- */
-html, body {
-    overflow-x: hidden; /* يمنع ظهور العناصر خارج الشاشة */
-    scroll-behavior: smooth;
-    width: 100%;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body {
-    background-color: var(--bg-body);
-    color: var(--text-main);
-}
-
-/* --- شاشة التحميل (Preloader) --- */
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #0B3C5D;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.loader-content {
-    text-align: center;
-    color: white;
-}
-
-.loader-content i {
-    animation: bounce 2s infinite;
-    color: var(--secondary);
-    margin-bottom: 20px;
-}
-
-.loading-bar {
-    width: 200px;
-    height: 4px;
-    background: rgba(255,255,255,0.2);
-    margin: 20px auto;
-    border-radius: 2px;
-    overflow: hidden;
-}
-
-.loading-bar::after {
-    content: '';
-    display: block;
-    width: 40%;
-    height: 100%;
-    background: var(--accent);
-    animation: loading 1.5s infinite ease-in-out;
-}
-
-@keyframes loading {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(300%); }
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-/* --- الهيدر والناف بار --- */
-.navbar {
-    background: var(--nav-bg);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo h1 {
-    color: white;
-    font-weight: 800;
-}
-.logo span { color: var(--secondary); }
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    color: white;
-    font-weight: 600;
-    position: relative;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    right: 0;
-    width: 0;
-    height: 2px;
-    background: var(--accent);
-    transition: width 0.3s;
-}
-
-.nav-links a:hover::after { width: 100%; }
-
-/* زر الوضع الليلي */
-.theme-btn {
-    background: none;
-    border: 2px solid rgba(255,255,255,0.3);
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
-    margin-left: 15px;
-}
-
-.nav-controls {
-    display: flex;
-    align-items: center;
-}
-
-/* --- القائمة في الموبايل --- */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    margin-right: 15px;
-}
-
-.hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-    transition: 0.4s;
-}
-
-/* --- Hero Section --- */
-.hero {
-    height: 100vh;
-    background: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1920') no-repeat center/cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    margin-top: -80px; /* لدمج الهيدر */
-    padding-top: 80px;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(11,60,93,0.9), rgba(11,60,93,0.4));
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-}
-
-/* --- الأزرار --- */
-.btn {
-    padding: 15px 35px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: transform 0.3s;
-}
-
-.btn-primary { background: var(--secondary); color: white; }
-.btn-accent { background: var(--accent); color: white; box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4); }
-.glass-effect { background: rgba(255,255,255,0.2); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.3); color: white; }
-
-.btn:hover { transform: translateY(-5px); }
-
-/* أنميشن النبض */
-.pulse-anim { animation: pulse 2s infinite; }
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(243, 156, 18, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); }
-}
-
-/* --- الخدمات --- */
-.bg-alt { background-color: var(--bg-alt); }
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.service-card {
-    background: var(--card-bg);
-    padding: 40px 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: var(--shadow);
-    border-top: 5px solid transparent;
-    transition: 0.4s;
-    position: relative;
-    overflow: hidden;
-}
-
-.service-card:hover {
-    transform: translateY(-15px);
-    border-top-color: var(--secondary);
-}
-
-.card-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--bg-alt);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 2rem;
-    color: var(--secondary);
-}
-
-.card-link {
-    color: var(--accent);
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-/* --- الحجز (تصميم الإدخال الجديد) --- */
-.booking-wrapper {
-    background: var(--card-bg);
-    padding: 50px;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.form-group { position: relative; margin-bottom: 20px; }
-.full-width { grid-column: 1 / -1; }
-
-input, select, textarea {
-    width: 100%;
-    padding: 15px;
-    background: var(--input-bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    color: var(--text-main);
-    font-size: 1rem;
-}
-
-/* Floating Label Effect */
-.floating-label {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    color: var(--text-light);
-    pointer-events: none;
-    transition: 0.3s;
-    background: var(--card-bg);
-    padding: 0 5px;
-}
-
-input:focus ~ .floating-label,
-input:not(:placeholder-shown) ~ .floating-label {
-    top: -10px;
-    font-size: 0.8rem;
-    color: var(--secondary);
-}
-
-/* --- المناطق (الخريطة التخيلية) --- */
-.coverage {
-    background: var(--primary);
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.map-visual {
-    height: 300px;
-    position: relative;
-    margin: 40px 0;
-    border: 2px dashed rgba(255,255,255,0.2);
-    border-radius: 20px;
-}
-
-.location-point {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: var(--accent);
-    border-radius: 50%;
-    border: 4px solid rgba(255,255,255,0.3);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.location-point:hover { transform: scale(1.5); }
-.location-point::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    color: var(--primary);
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    opacity: 0;
-    transition: 0.3s;
-    white-space: nowrap;
-}
-.location-point:hover::after { opacity: 1; top: -40px; }
-
-/* --- الفوتر --- */
-.footer {
-    background: #082d46;
-    color: white;
-    padding: 60px 0 20px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.social-links { margin-top: 20px; }
-.social-links a {
-    color: white;
-    margin-left: 15px;
-    font-size: 1.2rem;
-    transition: 0.3s;
-}
-.social-links a:hover { color: var(--accent); }
-
-/* --- واتساب العائم --- */
-.float-whatsapp {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #25d366;
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    z-index: 1000;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* --- استعلامات الميديا (للموبايل) --- */
-@media (max-width: 768px) {
-    .container { width: 90%; margin: 0 auto; }
+document.addEventListener('DOMContentLoaded', () => {
     
-    .desktop-btn { display: none; }
-    .hamburger { display: block; }
+    // 1. شاشة التحميل (Preloader) - مع حماية
+    const preloader = document.getElementById('preloader');
+    
+    // وظيفة لإخفاء الشاشة
+    const hidePreloader = () => {
+        if(preloader) {
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        }
+    };
 
-    /* أنميشن القائمة المنسدلة */
-    .nav-links {
-        position: fixed;
-        top: 80px;
-        right: 0;
-        width: 100%;
-        background: var(--nav-bg);
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 0;
-        gap: 20px;
-        /* الخدعة هنا للانميشن */
-        height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-        pointer-events: none;
+    // إخفاء الشاشة عند اكتمال التحميل
+    window.addEventListener('load', () => {
+        hidePreloader();
+        // تفعيل مكتبة AOS بعد التحميل
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, once: true, offset: 50 });
+        }
+    });
+
+    // *أمان إضافي*: إخفاء الشاشة بعد 5 ثواني حتى لو لم يكتمل التحميل
+    setTimeout(hidePreloader, 5000);
+
+    // 2. قائمة الموبايل (Mobile Menu)
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('toggle');
+        });
+
+        // إغلاق القائمة عند اختيار رابط
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('toggle');
+            });
+        });
     }
 
-    .nav-links.active {
-        height: auto;
-        opacity: 1;
-        pointer-events: auto;
-        padding-bottom: 50px;
-        border-bottom: 2px solid var(--accent);
-    }
+    // 3. الوضع الليلي (Dark Mode)
+    const themeBtn = document.getElementById('theme-toggle');
+    const body = document.body;
     
-    .mobile-booking-btn {
-        display: block !important;
-        background: var(--accent);
-        padding: 10px 30px;
-        border-radius: 50px;
+    if (themeBtn) {
+        // استرجاع الوضع المحفوظ
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+                localStorage.setItem('theme', 'light');
+            }
+        });
     }
 
-    .hero h1 { font-size: 2rem; }
-    .form-grid { grid-template-columns: 1fr; }
-    
-    .location-point::after { opacity: 1; top: -35px; } /* إظهار الأسماء دائماً في الجوال */
-}
+    // 4. نموذج حجز الواتساب (WhatsApp Booking)
+    const bookingForm = document.getElementById('bookingForm');
+
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // تغيير نص الزر ليدل على التفاعل
+            const btn = bookingForm.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري التحويل...';
+
+            // جمع البيانات
+            const service = document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text;
+            const name = document.getElementById('fullName').value;
+            const phone = document.getElementById('phoneNumber').value;
+            const from = document.getElementById('fromLocation').value;
+            const to = document.getElementById('toLocation').value;
+            const date = document.getElementById('date').value;
+            const pax = document.getElementById('passengers').value;
+            const notes = document.getElementById('notes').value;
+
+            // تنسيق الرسالة
+            let msg = `*حجز جديد - أبوحسين للمشاوير*%0a`;
+            msg += `---------------------------%0a`;
+            msg += `🚗 *الخدمة:* ${service}%0a`;
+            msg += `👤 *الاسم:* ${name}%0a`;
+            msg += `📱 *الجوال:* ${phone}%0a`;
+            msg += `📍 *من:* ${from}%0a`;
+            msg += `🏁 *إلى:* ${to}%0a`;
+            msg += `📅 *التاريخ:* ${date}%0a`;
+            msg += `👥 *العدد:* ${pax}%0a`;
+            if(notes) msg += `📝 *ملاحظات:* ${notes}`;
+
+            // فتح واتساب
+            const whatsappNumber = "967775196324";
+            setTimeout(() => {
+                window.open(`https://wa.me/${whatsappNumber}?text=${msg}`, '_blank');
+                btn.innerHTML = originalText;
+            }, 1000);
+        });
+    }
+});
